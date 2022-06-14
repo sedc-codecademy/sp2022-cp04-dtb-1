@@ -4,14 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer" />
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <title>Developer Tech Blog</title>
 </head>
 <body>
     <div class="container">
         <!-- Header -->
-        <section id="header-section"></section>
+        <section id="header-section">
+            <header class="header">
+                <nav class="navbar">
+                    <div class="toggle-container">
+                        <label for="nav-toggle" class="toggle-button">
+                                <span class="bar"></span>
+                                <span class="bar"></span>
+                                <span class="bar"></span>
+                        </label>
+                    </div>    
+                    
+                    <div class="logo">
+                        <h2>DevBlog</h2>
+                    </div>
+                    <input type="checkbox" id="nav-toggle" class="nav-toggle">  
+                    <div class="navbar-links">
+                        <ul>
+                            <li><a href="#" class="link">Home</a></li>
+                            <li><a href="#" class="link">Newsletter</a></li>
+                            <li><a href="#" class="link">About</a></li>
+                            <li>
+                                <div class="login-btn">
+                                    <a href="#" class="link">Login</a>
+                                </div>  
+                            </li>
+                            
+                        </ul>
+                    </div>
 
+                    <div class="filter-container">
+                        <a href="#" class="link more-options">Filter</a> 
+                        <span class="link search-icon"></span>
+                    </div>                    
+                </nav>     
+            </header>
+        </section>
+        
         <!-- Filter Menu -->
         <section id="filter-section"></section>
 
