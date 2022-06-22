@@ -207,8 +207,75 @@ body {
 }
 
 
+/* START */
+/* CAROUSEL BLOG POST SECTION START */
+.carousel-container {
+    width: 80%;
+    margin: 2em auto;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    /* border: 1px solid black; */
+}
 
-/* -------------- */
+.blog-post-card {
+    margin: 0 0.5em;
+    width: 100%;
+    height: 250px;
+    /* display: flex; */
+    position: relative;
+    background-size: 110% 100%;
+    background-image: url("https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+}
+
+.blog-post-body {
+    padding: 0.75em;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background:rgba(60, 59, 59, 0.3);
+    color: var(--main-light-color);
+}
+
+.blog-post-title {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 4px;
+}
+
+.blog-post-text {
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+} 
+
+.blog-post-tags  {
+    margin: 0.75em 0 0;
+}
+
+.blog-post-tags span {
+
+    padding: 0.25em 0.5em;
+}
+
+.tech-tag {
+    background-color: var(--main-dark-color);
+}
+
+.design-tag {
+    background-color: var(--highlight-color-1);
+}
+
+.arhitecture-tag {
+    background-color: cadetblue;
+}
+
+.tips-tricks-tag {
+    background-color: rgb(11, 181, 33);
+}
+
+/* CAROUSEL BLOG POST SECTION */
+/* END */
 
 
 
