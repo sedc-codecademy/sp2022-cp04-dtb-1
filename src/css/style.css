@@ -4,6 +4,7 @@
     --main-light-color: rgb(255, 255, 255);
     --highlight-color-1: rgb(159, 29, 240);
     --navbar-link-font-size: 20px;
+    --filter-list-font-size: 17px;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;900&display=swap');
@@ -25,7 +26,7 @@ body {
     min-height: 100vh;
 }
 
-/* Hedaer Navbar */
+/* Header Navbar */
 .header {
     background-color: var(--main-light-color);
     border-bottom: 1px solid black;  
@@ -179,6 +180,33 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+/* FILTER MENU */
+
+.filter-menu {
+    display: flex;
+    justify-content: center;
+}
+
+.filter-list {
+    list-style: none;
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    font-size: var(--filter-list-font-size);
+}
+
+.filter {
+    text-decoration: none;
+    color: var(--main-dark-color);
+}
+
+.filter:hover {
+    color: var(--highlight-color-1);
+}
+
+
 
 /* -------------- */
 
@@ -269,4 +297,15 @@ body {
         font-size: 1.2em;
     } 
     
-  }
+    /* FILTER MENU */
+
+    .filter-menu {
+        display: block;
+        padding: 0 2em;
+    }
+
+    .filter-list {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
