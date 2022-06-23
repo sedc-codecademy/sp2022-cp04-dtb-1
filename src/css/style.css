@@ -207,8 +207,102 @@ body {
 }
 
 
+/* START */
+/* CAROUSEL BLOG POST SECTION START */
 
-/* -------------- */
+/* SWIPER START */
+.swiper {
+    width: 80%;
+    height: 100%;
+}
+
+.swiper-slide {
+text-align: center;
+font-size: 18px;
+background: #fff;
+
+/* Center slide text vertically */
+display: -webkit-box;
+display: -ms-flexbox;
+display: -webkit-flex;
+display: flex;
+-webkit-box-pack: center;
+-ms-flex-pack: center;
+-webkit-justify-content: center;
+justify-content: center;
+-webkit-box-align: center;
+-ms-flex-align: center;
+-webkit-align-items: center;
+align-items: center;
+}
+
+.swiper-slide img {
+display: block;
+width: 100%;
+height: 100%;
+object-fit: cover;
+  }
+/* SWIPER END */
+
+.blog-post-card {
+    width: 100%;
+    height: 250px;
+    position: relative;
+    background-size: 110% 100%;
+    background-image: url("https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+}
+
+.blog-post-body {
+    padding: 0.75em;
+    padding-bottom: 1.6em;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background:rgba(60, 59, 59, 0.3);
+    color: var(--main-light-color);
+}
+
+.blog-post-title {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 4px;
+}
+
+.blog-post-text {
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+} 
+
+.blog-post-tags  {
+    margin: 0.75em 0 0;
+    display: flex;
+    flex-flow: wrap;
+}
+
+.blog-post-tags span {
+    padding: 0.25em 0.5em;
+    margin: 0.1em;
+}
+
+.tech-tag {
+    background-color: var(--main-dark-color);
+}
+
+.design-tag {
+    background-color: var(--highlight-color-1);
+}
+
+.arhitecture-tag {
+    background-color: cadetblue;
+}
+
+.tips-tricks-tag {
+    background-color: rgb(11, 181, 33);
+}
+
+/* CAROUSEL BLOG POST SECTION */
+/* END */
 
 
 
@@ -307,5 +401,12 @@ body {
     .filter-list {
         flex-direction: column;
         align-items: flex-start;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .swiper {
+        width: 100%;
     }
 }
