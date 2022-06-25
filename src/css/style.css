@@ -124,12 +124,13 @@ body {
     background-color: var(--main-dark-color);
 }
 
-.login-btn a {
+.login-link {
     text-decoration: none;
     color: var(--main-light-color);
-}
+} 
 
-.login-btn a::after {
+
+.login-link::after {
     content: "\f007";  
     font-family: "Font Awesome 5 Free";
     font-weight: 400;
@@ -179,6 +180,11 @@ body {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
 }
+
+/* ACTIVE LINK */
+.active-link {
+    color: var(--highlight-color-1);
+} 
 
 /* FILTER MENU */
 
@@ -306,6 +312,16 @@ object-fit: cover;
 
 
 
+/* BLOG PAGE END */
+
+#newsletter-section,
+#about-section,
+#login-section {
+    display: none;
+}
+
+
+
 /* MOBILE DESIGN */
 @media only screen and (max-width: 1000px) {
 
@@ -342,13 +358,14 @@ object-fit: cover;
         background-color: var(--main-light-color);
         transform: scale(1, 0);
         transform-origin: top;
-        transition: transform 400ms ease-in-out;
+        /* transition: transform 400ms ease-in-out; */
         border-bottom: 1px solid black;
+        z-index: 100; 
     }
 
     .navbar-links ul {
         flex-direction: column;
-        align-items: flex-start;   
+        align-items: flex-start;  
     }
 
     .navbar-links li {
