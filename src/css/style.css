@@ -438,6 +438,16 @@ object-fit: cover;
 
 
 
+/* BLOG PAGE END */
+
+#newsletter-section,
+#about-section,
+#login-section {
+    display: none;
+}
+
+
+
 /* MOBILE DESIGN */
 @media only screen and (max-width: 1000px) {
 
