@@ -1,0 +1,255 @@
+@use '../abstracts/colors' as c;
+@use '../abstracts/fonts' as f;
+
+/* Header Navbar */
+.header {
+    background-color: c.$main-light-color;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.navbar {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas:'logo navbar search';
+    grid-template-columns: 100px 1fr;
+    font-size: f.$navbar-link-font-size;
+
+    p {
+        display: inline;
+        cursor: pointer;
+    }
+}
+
+.link {
+    text-decoration: none;
+    color: c.$main-dark-color;
+
+    &:hover {
+        color: c.$highlight-color-1;
+    }
+}
+
+/*Nav toggle */
+.nav-toggle {
+    display: none;
+}
+
+.toggle-container {
+    grid-area: toggle;
+    display: none;
+    justify-content: left;
+    align-items: center;
+}
+
+.toggle-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 21px;
+    cursor: pointer; 
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: c.$main-dark-color;
+    border-radius: 10px;
+}
+
+.logo {
+    grid-area: logo;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+/* Navigation LINKS */
+.navbar-links {
+    display: flex;
+    justify-content: center;
+    grid-area: navbar;
+    
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;  
+    }
+
+    li {
+        margin-right: 2em;
+    }
+}
+
+
+/* LOGIN */
+.login-container {
+    display:  flex;
+    justify-content: flex-end;
+    align-items: center;
+    grid-area: login;
+}
+
+.login-btn {
+    padding: 4px 8px;
+    border-radius: 15px;
+    background-color: c.$main-dark-color;
+}
+
+.login-link {
+    text-decoration: none;
+    color: c.$main-light-color;
+
+    &::after {
+        content: "\f007";  
+        font-family: "Font Awesome 5 Free";
+        font-weight: 400;
+        font-style: normal;
+        font-variant: normal;
+        margin-left: 0.25em;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+    }
+} 
+
+/* Search components */
+.filter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: search;
+}
+
+.more-options {
+    display: flex;
+    align-items: center;
+
+    &::after {
+        content: "\f002"; 
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        font-style: normal;
+        font-variant: normal;
+        font-size: 0.75em;
+        margin-left: 0.25em;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+    }
+}
+
+
+.search-icon {
+    display: none;
+
+    &::after {
+        content: "\f002"; 
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        font-style: normal;
+        font-variant: normal;
+        font-size: 0.75em;
+        margin-left: 0.25em;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+    }
+}
+
+
+/* ACTIVE LINK */
+.active-link {
+    color: c.$highlight-color-1;
+} 
+
+
+
+
+@media only screen and (max-width: 1000px) {
+
+    .navbar {
+        position: relative;
+        width: 100%;
+        padding: 0;
+        grid-template-areas:
+        'toggle logo logo search'
+        'navbar navbar navbar navbar';
+    }
+
+    /* Toggle */
+    .toggle-container {
+        padding-left: 2em;
+        display: flex;
+    }
+  
+    .nav-toggle:checked ~ .navbar-links {
+        transform: scale(1, 1);
+    }
+
+    .nav-toggle:checked ~ .navbar-links li{
+        opacity: 1;
+        transition: opacity 250ms ease-in-out 250ms;
+    }
+
+    /* Navigation LINKS */
+    .navbar-links {
+        width: 100vw;
+        position: absolute;
+        justify-content: left;
+        padding-left: 2em;
+        background-color: c.$main-light-color;
+        transform: scale(1, 0);
+        transform-origin: top;
+        /* transition: transform 400ms ease-in-out; */
+        border-bottom: 1px solid black;
+        z-index: 100; 
+
+        ul {
+            flex-direction: column;
+            align-items: flex-start;  
+        }
+
+        li {
+            padding-bottom: 1em;
+            opacity: 0;
+            transition: opacity 150ms ease-in-out;
+        }
+
+        a {
+            font-size: 28px;  
+        }
+    }
+
+    .login-container {
+        padding: 0 2em;
+        border-radius: 0;
+        background-color: transparent;
+    }
+    
+    .login-btn {
+        color: c.$main-dark-color;
+    }
+
+    .logo {
+        justify-content: center;
+    }
+
+    .filter-container {
+        padding: 0 2em;
+        justify-content: right;
+
+        a {
+            display: none;
+        }
+    }
+ 
+    .search-icon {
+        display: block;
+
+        &::after {
+            font-size: 1.2em;
+        } 
+    }    
+}

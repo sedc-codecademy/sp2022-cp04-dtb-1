@@ -1,0 +1,82 @@
+@use '../abstracts/colors' as c;
+@use '../abstracts/fonts' as f;
+
+.main-blog-posts-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.main-blog-posts-card {
+    width: 49%;
+    height: 280px;
+    margin: 1em 0;
+    display: grid;
+    grid-template-columns: auto 1fr ;
+    background-color: c.$highlight-color-1;
+}
+
+.main-blog-image-container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+
+    img {
+        object-fit: cover;
+        height: 280px;
+    }
+}
+
+.main-blog-posts-body {
+    padding: 0 0.5em;
+    height: 280px;
+    width: 100%;
+    background:rgba(60, 59, 59, 0.3);
+    color: c.$main-light-color;
+}
+
+.load-more {
+    margin: 2em auto;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+@media only screen and (max-width:1200px){
+    /* Main blog Posts Area */
+    .main-blog-posts-card {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .main-blog-posts-container{
+        width: 100%;
+    }
+
+    .main-blog-posts-card {
+        /* grid-template-columns: 1fr ; */
+        display: flex;
+        position: relative;
+    }
+
+    .main-blog-image-container {
+        width: 100%;
+        
+    }
+
+    .main-blog-image-container img{
+        width: 100%;
+    }
+
+    .main-blog-posts-body {
+        position: absolute;
+        bottom: 0;
+        height: auto;
+    }
+}
