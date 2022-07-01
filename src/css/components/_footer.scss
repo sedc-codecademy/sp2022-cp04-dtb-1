@@ -1,0 +1,51 @@
+@use '../abstracts/colors' as c;
+@use '../abstracts/fonts' as f;
+
+.footer {
+    color: c.$main-light-color;
+    background: rgb(22, 22, 22);
+    text-align: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding: 3rem 0;
+    line-height: 1.4;
+    font-size: 1rem;
+  }
+
+.footer-links,
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+  }
+
+.footer-link {
+    color: c.$main-light-color;
+    text-transform: capitalize;
+    font-size: 1, 1 rem;
+    margin-right: 1rem;
+    letter-spacing: 0.25rem;
+    transition: all 0.3s linear;
+}
+
+.footer-link:hover {
+    color: c.$highlight-color-1;
+}
+
+.footer-icon {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    color: c.$main-light-color;
+    transition: all 0.3s linear;
+}
+
+.footer-icon:hover {
+    color: c.$highlight-color-1;
+    transform: translateY(-10%);
+}
+
+.copyright {
+    text-transform: capitalize;
+    letter-spacing: 0.30rem;
+  }
