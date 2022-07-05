@@ -38,9 +38,25 @@ const printName = () => {
     console.log("Blog")
 }
 
-const carouselSection = () => {
-    console.log('carousel')
+const stars = document.querySelectorAll(".stars-span");
+const fillStars = (value) => {
+    stars.forEach (star => {
+      if ($(star).attr("id") <= value) {
+        $(star).addClass("stars-span-full");
+      };
+    })
 }
+
+const carouselSection = () => {
+    for (let star of stars) {
+      star.addEventListener("click", (e) => {
+        fillStars(e.target.id);
+      } )
+    }
+    
+}
+carouselSection();
+
 
 
 export const blogHelper = {

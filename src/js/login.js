@@ -15,15 +15,20 @@ const loginUser = async () => {
 
 
     try {
-        const data = await fetch(" http://localhost:3000/users/1")
-        const user = await data.json()
+        const data = await fetch(" http://localhost:3000/users")
+        const users = await data.json()
         
-        if(username.value == user.username && password.value == user.password) {
-            localStorage.setItem('User', JSON.stringify(user))
-            history.pushState({}, '', 'index.html')
-            location.reload()
+        let found = false;
+        for (let user of users) {
+            if(username.value == user.username && password.value == user.password) {
+                localStorage.setItem('User', JSON.stringify(user))
+                history.pushState({}, '', 'index.html')
+                location.reload()
+                found = true;
+                break;
+            }
         }
-        else {
+        if (!found) {
             errorMsg.style.display = "block";
             username.value  = ""
             password.value  = ""
