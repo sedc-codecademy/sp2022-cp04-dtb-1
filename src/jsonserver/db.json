@@ -4,7 +4,8 @@
             "userId": 1,
             "id": 1,
             "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-            "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+            "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+            "stars": [{ "userId": 1, "value": 4 }]
         },
         {
             "userId": 1,
@@ -66,7 +67,26 @@
         {
             "id": 1,
             "username": "admin",
-            "password": "admin"
+            "password": "admin",
+            "role": "admin"
+        },
+        {
+            "id": 2,
+            "username": "user1",
+            "password": "user1",
+            "role": "user"
+        },
+        {
+            "id": 3,
+            "username": "user2",
+            "password": "user2",
+            "role": "user"
+        },
+        {
+            "id": 4,
+            "username": "user3",
+            "password": "user3",
+            "role": "user"
         }
     ]
 }
