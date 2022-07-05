@@ -37,14 +37,15 @@
                 <input type="checkbox" id="nav-toggle" class="nav-toggle">  
                 <div class="navbar-links">
                     <ul>
-                        <li><a href="#home" class="link route active-link">Home</a></li>
-                        <li><a href="#newsletter" class="link route">Newsletter</a></li>
-                        <li><a href="#about" class="link route">About</a></li>
-                        <li>
+                        <li><a href="#home" id="home-link" class="link route active-link">Home</a></li>
+                        <li><a href="#newsletter" id="newsletter-link"class="link route">Newsletter</a></li>
+                        <li><a href="#about" id="about-link" class="link route">About</a></li>
+                        <li id="li-login">
                             <div class="login-btn">
-                                <a href="#login" class="link route login-link">Login</a>
+                                <a href="#login" id="login-link" class="link route login-link">Login</a>
                             </div>  
                         </li>
+                        <li id="li-user"><a href="#user" id="user-link" class="link route user-link"></a></li>
                     </ul>
                 </div>
 
@@ -403,36 +404,78 @@
         </section>
 
         <!-- Login Page -->
-        <section id="login-section" class="pages">Login</section>
+        <section id="login-section" class="pages">
+                
+            <form class="form">
+                <h2>Log In</h2>
+                <div class='form-group'>
+                  <input
+                    type='text'
+                    class='form-control'
+                    id='username'
+                    name='username'
+                    placeholder='Enter your Username'
+                  />
+                </div>
+                <div class='form-group'>
+                  <input
+                    type='password'
+                    class='form-control'
+                    id='password'
+                    name='password'
+                    placeholder='Enter password'
+                  />
+                </div>
+                <div class="form-grop">
+                    <p class="error-msg">Invalid credentials!</p>
+                </div>
+                <div class='form-group'>
+                  <button type='submit' class='btn btn-block'>
+                    Submit
+                  </button>
+                </div>
+              </form>
+        </section>
+
+        <!-- Loged In User Pane -->
+        <section id="user-section" class="pages">
+            Loged
+            <button id="log-out-user-btn">Log Out</button>
+        </section>
+
     </div>
 
-        <!-- Footer -->
-        <section id="footer-section">
-            <footer class="footer">
-                <!-- footer links asdasdsad -->
-                <div class="footer-links">
-                    <a href="#backToTop" class="footer-link scroll-link">BackToTop</a>
-                    <a href="#topStories" class="footer-link scroll-link">Top Stories</a>
-                    <a href="#techTopics" class="footer-link scroll-link">Tech Topics</a>
-                    <a href="#allPosts" class="footer-link scroll-link">All Posts</a>
-                </div>
-                <!-- footer icons -->
-                <div class="footer-icons">
-                    <a href="https://www.facebook.com" target="_blank" class="footer-icon"><i class="fab fa-facebook"></i></a>
-                    <a href="https://www.twitter.com" target="_blank" class="footer-icon"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.instagram.com/" target="_blank" class="footer-icon"><i class="fab fa-instagram"></i></a>
-                </div>
-                <!-- copyright -->
-                <p class="copyright">
-                    copyright &copy; SEDC 2022 <span id="date"></span>. all rights reserved
-                </p>
-            </footer>
-        </section>
+    <!-- Footer -->
+    <section id="footer-section">
+        <footer class="footer">
+            <!-- footer links asdasdsad -->
+            <div class="footer-links">
+                <a href="#backToTop" class="footer-link scroll-link">BackToTop</a>
+                <a href="#topStories" class="footer-link scroll-link">Top Stories</a>
+                <a href="#techTopics" class="footer-link scroll-link">Tech Topics</a>
+                <a href="#allPosts" class="footer-link scroll-link">All Posts</a>
+            </div>
+            <!-- footer icons -->
+            <div class="footer-icons">
+                <a href="https://www.facebook.com" target="_blank" class="footer-icon"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.twitter.com" target="_blank" class="footer-icon"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/" target="_blank" class="footer-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+            <!-- copyright -->
+            <p class="copyright">
+                copyright &copy; SEDC 2022 <span id="date"></span>. all rights reserved
+            </p>
+        </footer>
+    </section>
 
     <!-- Scripts -->
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" 
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" 
+        crossorigin="anonymous"></script>
+    <!-- Main js -->
     <script src="./js/main.js" type="module"></script>
 </body>
 </html>

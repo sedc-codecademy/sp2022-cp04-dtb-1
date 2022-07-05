@@ -5,4 +5,6 @@
 export { blogHelper } from "./blog.js"
 export { loginHelper } from "./login.js"
 export { newsletterHelper } from "./newsletter.js"
+export { getLoggedHelper } from "./helpers/getLoggedUser.js"
+export { adminTabHelper } from "./adminTab.js"
 
