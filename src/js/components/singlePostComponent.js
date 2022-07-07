@@ -90,21 +90,20 @@ export const buildSinglePost = post => {
 
     const commentPostedDiv = $('<div class="single-post-comments-container"></div>')
 
-    if(!post.comment) {
+    if(post.comments.length == 0) {
         const errorMsg = $('<h3>Be the first to comment!</h3>')
         commentPostedDiv.append(errorMsg)
-
     }
 
     post.comments.map(comment => {
-        const singleCommpent = $('<div class="single-post-comment-show"></div>')
+        const singleComment = $('<div class="single-post-comment-show"></div>')
         const commentUser = $(`<h4>User with id:${comment.userId}</h4>`)
         const coomentBody = $(`<p>${comment.text}</p>`)
 
-        singleCommpent.append(commentUser)
-        singleCommpent.append(coomentBody)
+        singleComment.append(commentUser)
+        singleComment.append(coomentBody)
 
-        commentPostedDiv.append(singleCommpent)
+        commentPostedDiv.append(singleComment)
     })
    
     
