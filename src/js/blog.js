@@ -1,4 +1,5 @@
 import { mainBlogSectionComponent } from './components/mainBlogSectionComponent.js'
+import {carouselSectionComponent} from "./components/carouselSectionComponents.js"
 
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
@@ -59,6 +60,7 @@ const carouselSection = () => {
 }
 carouselSection();
 
+carouselSectionComponent();
 mainBlogSectionComponent();
 
 export const blogHelper = {
