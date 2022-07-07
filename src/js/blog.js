@@ -1,3 +1,4 @@
+import { mainBlogSectionComponent } from './components/mainBlogSectionComponent.js'
 import {carouselSectionComponent} from "./components/carouselSectionComponents.js"
 
 var swiper = new Swiper(".mySwiper", {
@@ -60,6 +61,7 @@ const carouselSection = () => {
 carouselSection();
 
 carouselSectionComponent();
+mainBlogSectionComponent();
 
 export const blogHelper = {
     printName,

@@ -65,59 +65,6 @@
     margin: 0;
 } 
 
-.blog-post-tags  {
-    /* margin: 0.75em 0 0; */
-    display: flex;
-    flex-flow: wrap;
-
-    span {
-        padding: 0.25em 0.5em;
-        margin: 0.1em;
-    }
-}
-
-.tech-tag {
-    background-color: c.$main-dark-color;
-}
-
-.design-tag {
-    background-color: c.$highlight-color-1;
-}
-
-.arhitecture-tag {
-    background-color: cadetblue;
-}
-
-.tips-tricks-tag {
-    background-color: rgb(11, 181, 33);
-}
-
-.stars-span {
-    cursor: pointer;
-    &:hover {
-        &::after{
-            font-weight: 900;
-        }
-    }
-    &::after {
-        content: "\f005"; 
-        font-family: "Font Awesome 5 Free";
-        font-weight: 400;
-        font-style: normal;
-        font-variant: normal;
-        font-size: 1em;
-        margin-left: 0.25em;
-        text-rendering: auto;
-        -webkit-font-smoothing: antialiased;
-    }
-}
-
-.stars-span-full {
-    &::after {
-        font-weight: 900;
-    }
-}
-
 
 @media only screen and (max-width: 600px) {
     .swiper {
