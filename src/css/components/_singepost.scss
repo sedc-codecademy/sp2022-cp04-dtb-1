@@ -1,0 +1,181 @@
+@use '../abstracts/colors' as c;
+@use '../abstracts/fonts' as f;
+@use '../abstracts/screenSize' as s;
+
+.sigle-post-container {
+    width: 60%;
+    margin: 2em auto;
+    padding:0.2em 2em 2em;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    background-color: rgba(237, 243, 244, 0.4);
+}
+
+.single-post-header {
+    text-align: center;
+
+    h2 {
+        font-size: f.$single-page-title;
+        margin: 1em 0 0.5em
+    }
+
+    h4 {
+        margin: 0;
+        margin-bottom: 0.5em;
+    }
+}
+
+.single-post-image-container {
+    width: 100%;
+    height: 300px;
+    // overflow:hidden;
+    background-image: url("https://cdn.discordapp.com/attachments/980836149293625364/993612107222368267/261627252_244472434291144_7165058740508591901_n.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.single-post-body {
+    p {
+        line-height: 1.4;
+        font-size: f.$single-page-text;
+    }
+}
+
+.blog-post-rating-tags-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.single-post-stars {
+    padding: 0.25em 0.5em;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    p {
+        font-size: 1.4em;
+    }
+}
+
+
+.single-post-stars-span-empty {
+    font-size: 24px;
+    &::after {
+        content: "\f005"; 
+        font-family: "Font Awesome 5 Free";
+        color: gold;
+        font-weight: 400;
+        font-style: normal;
+        font-variant: normal;
+        font-size: 1.5em;
+        margin-left: 0.25em;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+    }
+}
+
+.single-post-stars-span-full {
+    font-size: 24px;
+    &::after {
+        content: "\f005"; 
+        font-family: "Font Awesome 5 Free";
+        color: gold;
+        font-weight: 900;
+        font-style: normal;
+        font-variant: normal;
+        font-size: 1.5em;
+        margin-left: 0.25em;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+    }
+}
+
+.single-post-tags {
+    font-size: 24px;
+    display: flex;
+    
+    span {
+        margin: 0.2em;
+    }
+}
+
+
+.blog-post-after-container {
+    width: 60%;
+    margin: 2em auto;
+    padding:0.2em 2em 2em;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    background-color: rgba(237, 243, 244, 0.4);
+}
+
+.single-post-comment-write {
+    input {
+        font-size:1.3em;
+        line-height: 1.4;
+        margin-bottom: 0.2em;
+    }
+
+    textarea {
+        width: 100%;
+        resize: none;
+        font-size:1.5em;
+        padding: 0.5em;
+        line-height: 1.4;
+    }
+}
+
+
+.single-post-submit-comment  {
+    margin:  1em auto 2em;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.single-post-submit-comment-btn {
+    padding: 10px 20px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background: #000;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    text-align: center;
+    appearance: button;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    &:hover {
+      transform: scale(0.98);
+    }
+  }
+
+  .single-post-comment-show {
+    width: 100%;
+    margin: 2em auto;
+    padding:0.2em 2em 2em;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    background-color: rgba(215, 224, 226, 0.4);
+    border-radius: 5px;
+  }
+
+  @media only screen and (max-width: s.$screen-size-medium){
+    .sigle-post-container {
+        width: 100%;
+    }
+
+    .blog-post-after-container {
+        width: 100%;
+    }
+
+    .single-post-tags {
+        flex-direction: column;
+    }
+
+    .single-post-stars {
+        justify-content: flex-start;
+    }
+
+}

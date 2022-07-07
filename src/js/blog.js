@@ -3,9 +3,7 @@ import {carouselSectionComponent} from "./components/carouselSectionComponents.j
 import {heroSectionComponent} from "./components/heroSectionComponent.js"
 
 export const blogPage = () =>{
-
-
-
+console.log('blog')
 //display spinner
 $('#blog-section').hide()
 $('.spinner').show()

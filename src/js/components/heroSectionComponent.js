@@ -1,3 +1,5 @@
+import { buildSinglePost } from './singlePostComponent.js'
+
 export const heroSectionComponent = async() => {
 
     const getPostsData = async() => {
@@ -40,6 +42,10 @@ export const heroSectionComponent = async() => {
             boxContent.append(divTags)
 
             mainDiv.append(boxContent)
+
+            mainDiv.on('click', () => {
+                buildSinglePost(post)
+            })
 
             postsContainer.append(mainDiv)
         })

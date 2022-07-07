@@ -62,7 +62,7 @@
             "tags": ["arhitecture"],
             "stars": [{ "userId": 2, "value": 1 }],
             "rating": 1,
-            "comments": [],
+            "comments": [{ "userId": 2, "text": "This is my first comment!", "anonymous": false }],
             "createdAt": "2022-05-06T16:32:41.939Z"
         },
         {
@@ -88,7 +88,7 @@
             "tags": ["tips-tricks"],
             "stars": [{ "userId": 2, "value": 5 }],
             "rating": 5,
-            "comments": [],
+            "comments": [{ "userId": 2, "text": "This is my first comment!", "anonymous": false }],
             "createdAt": "2022-04-06T16:32:41.939Z"
         },
         {

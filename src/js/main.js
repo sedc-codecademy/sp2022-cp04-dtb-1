@@ -22,6 +22,7 @@ $( document).ready(function() {
   }
 
   window.addEventListener('popstate', () => { 
+    console.log('change')
     //if we are navigating with the header dont avtivate
     //if we are navigating with the history state activate
     if(!window.location.href.includes($('.active-link').attr("href"))){

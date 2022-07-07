@@ -16,6 +16,8 @@ body {
     width: 100%;
     min-height: 100vh;
     margin-top: 2em;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -23,6 +25,8 @@ body {
 #newsletter-section,
 #about-section,
 #login-section,
-#user-section {
+#user-section,
+#post-section {
     display: none;
 }
+
