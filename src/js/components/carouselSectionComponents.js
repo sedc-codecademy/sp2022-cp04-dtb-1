@@ -1,3 +1,5 @@
+import { buildSinglePost } from './singlePostComponent.js'
+
 export const carouselSectionComponent = async () => {
   var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
@@ -33,40 +35,55 @@ export const carouselSectionComponent = async () => {
           slidesPerGroup: 4,
         }
       }
-});
-
-const stars = document.querySelectorAll(".stars-span");
-const fillStars = (value) => {
-    stars.forEach (star => {
-      if ($(star).attr("id") <= value) {
-        $(star).addClass("stars-span-full");
-      };
-    })
-}
-
-const carouselSection = () => {
-    for (let star of stars) {
-      star.addEventListener("click", (e) => {
-        fillStars(e.target.id);
-      } )
+  });
+     
+  const fetchData = async () => {
+    try {
+      const data = await fetch("http://localhost:3000/posts?_sort=createdAt&_order=desc&_page=1&_limit=12");
+      const posts = await data.json();
+      console.log(posts);
+      return posts;
+    } catch (error) {
+      console.log(error);
     }
-    
-}
-carouselSection()
-
-    const fetchData = async () => {
-      try {
-        const data = await fetch("http://localhost:3000/posts/");
-        const post = await data.json();
-        return post;
-      } catch (error) {
-        console.log(error);
-      }
-    };
-  
-    // console.log(await fetchData());
-    fetchData();
-  
-    const carouselContainer = document.querySelector(".swiper-wrapper");
-  
   };
+
+  const carouselContainer = document.querySelector(".swiper-wrapper");
+  carouselContainer.innerHTML = "";
+
+  fetchData().then(posts => {
+    posts.forEach(post => {
+      let tagString = "";
+      post.tags.forEach(tag => {
+        tagString += `<span class=${tag}-tag>${tag.replace('-', ' & ')}</span>`
+      })
+
+      let mainContainer = document.createElement('div');
+      mainContainer.classList.add('swiper-slide');
+      mainContainer.classList.add('blog-post-card');
+      mainContainer.style.backgroundImage = `url(${post.image})`
+      mainContainer.innerHTML += `<div class="blog-post-body">
+      <h3 class="blog-post-title">${post.title}</h2>
+      <div class="rating-container">
+          <span>Rating: ${post.rating}</span>
+          <span class="stars-span-full "></span>
+      </div>
+      <div class="blog-post-tags">
+          ${tagString}
+      </div>
+  </div>`
+
+    mainContainer.addEventListener('click', () => {
+      buildSinglePost(post)
+    })
+
+      carouselContainer.appendChild(mainContainer);
+    });
+  })
+  .catch(error => {
+    carouselContainer.innerHTML += `<h1>An error has occurred!</h1>`;
+  })
+};
+
+
+  

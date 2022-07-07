@@ -1,3 +1,5 @@
+import { buildSinglePost } from './singlePostComponent.js'
+
 export const mainBlogSectionComponent = () => {
     let PAGE_NUMBER = 1
     let LIMIT = 4
@@ -77,6 +79,10 @@ export const mainBlogSectionComponent = () => {
 
             mainDiv.append(imageDiv)
             mainDiv.append(bodyDiv)
+
+            mainDiv.on('click', () => {
+                buildSinglePost(post)
+            })
 
             postsContainer.append(mainDiv)
         })
