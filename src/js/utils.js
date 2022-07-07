@@ -2,9 +2,9 @@
 //after creating a new js file place the export here first
 
 //CODE HERE
-export { blogHelper } from "./blog.js"
+export { blogPage } from "./blog.js"
 export { loginHelper } from "./login.js"
-export { newsletterHelper } from "./newsletter.js"
+export { newsletterPage } from "./newsletter.js"
 export { getLoggedHelper } from "./helpers/getLoggedUser.js"
 export { adminTabHelper } from "./adminTab.js"
 
