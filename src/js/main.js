@@ -10,14 +10,14 @@ $( document).ready(function() {
   const navbarLinks = document.querySelectorAll(".route")
   const user = getLoggedHelper();
   
-  $('#li-login').hide()
-  $('#li-user').hide()
+  $('#login-link').hide()
+  $('#user-link').hide()
 
   if(!user) {
-    $('#li-login').show()
+    $('#login-link').show()
   }
   else {
-    $('#li-user').show()
+    $('#user-link').show()
     $('#user-link').append(user.username)
   }
   

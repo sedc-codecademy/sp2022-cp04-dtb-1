@@ -12,6 +12,8 @@
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css'>
+
     <link rel="stylesheet" type="text/css" href="./css/main.css">
     <!--This is placeholder solution. With images it will go out-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -40,19 +42,19 @@
                         <li><a href="#home" id="home-link" class="link route active-link">Home</a></li>
                         <li><a href="#newsletter" id="newsletter-link"class="link route">Newsletter</a></li>
                         <li><a href="#about" id="about-link" class="link route">About</a></li>
-                        <li id="li-login">
+                        <!-- <li id="li-login">
                             <div class="login-btn">
                                 <a href="#login" id="login-link" class="link route login-link">Login</a>
                             </div>  
-                        </li>
-                        <li id="li-user"><a href="#user" id="user-link" class="link route user-link"></a></li>
+                        </li> -->
+                        <!-- <li id="li-user"><a href="#user" id="user-link" class="link route user-link"></a></li> -->
                     </ul>
                 </div>
 
-                <div class="filter-container">
-                    <a href="#" class="link more-options">Filter</a> 
-                    <span class="link search-icon"></span>
-                </div>                    
+                <div class="login-btn">
+                    <a href="#login" id="login-link" class="link route login-link">Login</a>
+                    <a href="#user" id="user-link" class="link route user-link"></a>
+                </div>                  
             </nav>     
         </header>
     </section>
@@ -104,18 +106,6 @@
                 </div>
                 </div>
             </div>
-
-            <!-- Filter Menu -->
-            <section id="filter-section">
-                <div class="filter-menu">
-                    <ul class="filter-list">
-                        <li><a href="#" class="filter design">Design</a></li>
-                        <li><a href="#" class="filter tech">Tech</a></li>
-                        <li><a href="#" class="filter architecture">Architecture</a></li>
-                        <li><a href="#" class="filter tips">Tips & Tricks</a></li>
-                    </ul>
-                </div>
-            </section>
 
             <!-- Carousel Blog Section-->
             <section id="carousel-section">
@@ -264,10 +254,53 @@
                 
             </section>
 
+            <!-- Filter Menu -->
+            <section id="filter-section">
+                    <div class="filter-menu">
+                        <div class="tags-filter">
+                            <ul class="filter-list">
+                                <li value="" class="filter-li active-filter"><p class="filter design" >All</p></li>
+                                <li value="design" class="filter-li"><p class="filter design" >Design</p></li>
+                                <li value="tech" class="filter-li"><p class="filter tech">Tech</p></li>
+                                <li value="arhitecture" class="filter-li"><p class="filter architecture">Architecture</a></li>
+                                <li value="tips-tricks" class="filter-li"><p class="filter tips">Tips & Tricks</p></li>
+                            </ul>
+                        </div>
+                        <div class="sorting-filter-container">
+                            <!-- jquery-ui-datepicker -->
+                            <div class="month-picker">
+                                <label for="month">Month: </label>
+                                <input type="text" id="month" name="month" class="monthPicker" />
+                                <label class="switch">
+                                    <input type="checkbox" class="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+    
+                            <div class="date-sort-container">
+                                <label for="sort-by-time">Sort by:</label>
+                                <select name="ort-by-time" id="sort-by-time">
+                                  <option value="desc">New to Old</option>
+                                  <option value="asc">Old to New</option>
+                                </select> 
+                            </div>
+                            <!-- <div class="dropdown">
+                                <button class="dropbtn">Dropdown</button>
+                                <div class="dropdown-content">
+                                  <a href="#">Link 1</a>
+                                  <a href="#">Link 2</a>
+                                  <a href="#">Link 3</a>
+                                </div>
+                              </div>  -->
+                            <button class="filter-btn">Search</button>
+                        </div>
+                    </div>    
+            </section>
+
             <!-- Main Blog Area -->
             <section id="main-blog-area">
                 <div class="main-blog-posts-container">
-
+                <!-- 
                     <div class="main-blog-posts-card">
                         <div class="main-blog-image-container">
                             <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=340&h=300&q=80" 
@@ -276,112 +309,18 @@
                         <div class="main-blog-posts-body">
                             <h3>Title</h3>
                             <p >Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        </div>
-                    </div>
 
-                    <div class="main-blog-posts-card">
-                        <div class="main-blog-image-container">
-                            <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=340&h=300&q=80" 
-                                alt="background">
+                            <div class="blog-post-tags">
+                                <span class="arhitecture-tag">Arhitecture</span>
+                                <span class="tips-tricks-tag">Tips&Tricks</span>
+                            </div>
                         </div>
-                        <div class="main-blog-posts-body">
-                            <h3>Title</h3>
-                            <p >Lorem ipsum dolor sit amet consectetur adipisicing edasdasdssdalit.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="main-blog-posts-card">
-                        <div class="main-blog-image-container">
-                            <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=340&h=300&q=80" 
-                                alt="background">
-                        </div>
-                        <div class="main-blog-posts-body">
-                            <h3>Title</h3>
-                            <p >Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        </div>
-                    </div>
+                    </div> -->
 
-                    <div class="main-blog-posts-card">
-                        <div class="main-blog-image-container">
-                            <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=340&h=300&q=80" 
-                                alt="background">
-                        </div>
-                        <div class="main-blog-posts-body">
-                            <h3>Title</h3>
-                            <p >Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        </div>
-                    </div>
-
-                    <div class="main-blog-posts-card">
-                        <div class="main-blog-image-container">
-                            <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=340&h=300&q=80" 
-                                alt="background">
-                        </div>
-                        <div class="main-blog-posts-body">
-                            <h3>Title</h3>
-                            <p >Lorem ipsum dolor sit amet consectetur adipisicing edasdasdssdalit.</p>
-                        </div>
-                    </div>
-
-                    <div class="main-blog-posts-card">
-                        <div class="main-blog-image-container">
-                            <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=340&h=300&q=80" 
-                                alt="background">
-                        </div>
-                        <div class="main-blog-posts-body">
-                            <h3>Title</h3>
-                            <p >Lorem ipsum dolor sit amet consectetur adipisicing edasdasdssdalit.</p>
-                        </div>
-                    </div>
-
-                    <div class="main-blog-posts-card">
-                        <div class="main-blog-image-container">
-                            <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=340&h=300&q=80" 
-                                alt="background">
-                        </div>
-                        <div class="main-blog-posts-body">
-                            <h3>Title</h3>
-                            <p >Lorem ipsum dolor sit amet consectetur adipisicing edasdasdssdalit.</p>
-                        </div>
-                    </div>
-
-                    <div class="main-blog-posts-card">
-                        <div class="main-blog-image-container">
-                            <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=340&h=300&q=80" 
-                                alt="background">
-                        </div>
-                        <div class="main-blog-posts-body">
-                            <h3>Title</h3>
-                            <p >Lorem ipsum dolor sit amet consectetur adipisicing edasdasdssdalit.</p>
-                        </div>
-                    </div>
-
-                    <div class="main-blog-posts-card">
-                        <div class="main-blog-image-container">
-                            <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=340&h=300&q=80" 
-                                alt="background">
-                        </div>
-                        <div class="main-blog-posts-body">
-                            <h3>Title</h3>
-                            <p >Lorem ipsum dolor sit amet consectetur adipisicing edasdasdssdalit.</p>
-                        </div>
-                    </div>
-
-                    <div class="main-blog-posts-card">
-                        <div class="main-blog-image-container">
-                            <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=340&h=300&q=80" 
-                                alt="background">
-                        </div>
-                        <div class="main-blog-posts-body">
-                            <h3>Title</h3>
-                            <p >Lorem ipsum dolor sit amet consectetur adipisicing edasdasdssdalit.</p>
-                        </div>
-                    </div>
-                
                 </div>
 
                 <div class="load-more">
-                    <button >Load More</button>
+                    <button class="load-more-btn">Load More</button>
                 </div>
       
             </section>
@@ -522,9 +461,12 @@
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- jQuery -->
+    
     <script src="https://code.jquery.com/jquery-3.6.0.js" 
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" 
         crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
     <!-- Main js -->
     <script src="./js/main.js" type="module"></script>
 </body>

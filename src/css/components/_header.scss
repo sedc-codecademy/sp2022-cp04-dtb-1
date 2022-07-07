@@ -95,14 +95,17 @@
 }
 
 .login-btn {
-    padding: 4px 8px;
-    border-radius: 15px;
-    background-color: c.$main-dark-color;
+    // padding: 4px 8px;
+    // border-radius: 15px;
+    // background-color: c.$main-dark-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .login-link {
     text-decoration: none;
-    color: c.$main-light-color;
+    // color: c.$main-light-color;
 
     &::after {
         content: "\f007";  
@@ -222,13 +225,9 @@
         }
     }
 
-    .login-container {
-        padding: 0 2em;
-        border-radius: 0;
-        background-color: transparent;
-    }
     
     .login-btn {
+        padding: 0 2em;
         color: c.$main-dark-color;
     }
 
