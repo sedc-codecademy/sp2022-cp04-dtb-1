@@ -1,5 +1,6 @@
 @use '../abstracts/colors' as c;
 @use '../abstracts/fonts' as f;
+@use '../abstracts/screenSize' as s;
 
 .main-blog-posts-container {
     width: 80%;
@@ -72,14 +73,17 @@
     }
   }
 
-@media only screen and (max-width:1600px){
-    /* Main blog Posts Area */
+@media only screen and (max-width: s.$screen-size-large){
     .main-blog-posts-card {
         width: 100%;
     }
 }
 
-@media only screen and (max-width:840px){
+@media only screen and (max-width: s.$screen-size-medium){
+    .main-blog-posts-container{
+        width: 100%;
+    }
+
     .main-blog-posts-body {
 
         p {
@@ -89,10 +93,6 @@
 }
 
 @media only screen and (max-width: 600px) {
-    .main-blog-posts-container{
-        width: 100%;
-    }
-
     .main-blog-posts-card {
         /* grid-template-columns: 1fr ; */
         display: flex;

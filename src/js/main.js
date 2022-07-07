@@ -3,7 +3,7 @@
 //after creating a new js file import it from the utils.js file
 
 //CODE HERE
-import { blogHelper, newsletterHelper, loginHelper, getLoggedHelper, adminTabHelper } from "./utils.js"
+import { blogPage, newsletterPage, loginHelper, getLoggedHelper, adminTabHelper } from "./utils.js"
 
 $( document).ready(function() {
   
@@ -20,12 +20,13 @@ $( document).ready(function() {
     $('#user-link').show()
     $('#user-link').append(user.username)
   }
-  
 
-
-  window.addEventListener('popstate', function() { 
-    console.log(window.location.href)
-    addActiveLink(window.location.href)
+  window.addEventListener('popstate', () => { 
+    //if we are navigating with the header dont avtivate
+    //if we are navigating with the history state activate
+    if(!window.location.href.includes($('.active-link').attr("href"))){
+      addActiveLink(window.location.href)
+    }
   });
 
   const routingHelper = () => {
@@ -54,10 +55,12 @@ $( document).ready(function() {
     if(link.includes("home")){
       hidePages(document.querySelector('#blog-section'))
       $('#home-link').addClass("active-link")
+      blogPage()
     }
     else if (link.includes("newsletter")) {
       hidePages(document.querySelector('#newsletter-section'))
       $('#newsletter-link').addClass("active-link")
+      newsletterPage()
     }
     else if (link.includes("about")) {
       hidePages(document.querySelector('#about-section'))
@@ -75,4 +78,5 @@ $( document).ready(function() {
   }
   
   routingHelper()
+  blogPage()
 });

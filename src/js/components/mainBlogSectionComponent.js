@@ -1,6 +1,7 @@
 export const mainBlogSectionComponent = () => {
     let PAGE_NUMBER = 1
     let LIMIT = 4
+    $('.load-more-btn').off()
 
     $(() => {
         $(".monthPicker").datepicker({
@@ -40,16 +41,16 @@ export const mainBlogSectionComponent = () => {
 
     const postBuilder = (posts, pageNumber) => {
         const postsContainer = $('.main-blog-posts-container')
+        console.log(`Page number: ${pageNumber}`);
         if(pageNumber == 1) {
             postsContainer.empty()
         }
-       
+        console.log(posts)
 
         posts.map(post => {
             const mainDiv = $('<div class="main-blog-posts-card"></div>')
             const imageDiv = $('<div class="main-blog-image-container"></div>')
             const imageCover = $(`<img src=${post.image} alt="background">`)
-            console.log(post.image)
             imageDiv.append(imageCover)
 
             const bodyDiv = $('<div class="main-blog-posts-body"></div>')
