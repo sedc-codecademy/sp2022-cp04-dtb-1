@@ -1,8 +1,0 @@
-1st time use
---------
-navigate to /jsonserver directory
-npm install
-
-starting jsonserver
----
-npm run json:server
