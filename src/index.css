@@ -48,6 +48,43 @@ body {
     cursor-pointer;
   }
 
+
+  .sidebar-links-full {
+    @apply flex items-center justify-start p-3
+         m-2 rounded-2xl 
+        bg-gray-400   hover:bg-violet-500
+        text-violet-500 hover:text-white
+        dark:bg-gray-800 dark:hover:bg-violet-500
+        transition-all duration-300 ease-linear shadow-lg;
+  }
+
+  .sidebar-links {
+      @apply relative flex items-center justify-center 
+      h-12 w-12 mt-2 mb-2 mx-auto  
+    bg-gray-400   hover:bg-violet-500
+    text-violet-500 hover:text-white
+    dark:bg-gray-800 dark:hover:bg-violet-500
+      hover:rounded-xl rounded-3xl
+      transition-all duration-300 ease-linear shadow-lg;
+  }
+
+  .sidebar-tooltip {
+    @apply absolute w-auto p-2 m-2 min-w-max top-6 rounded-md shadow-md
+    text-white bg-gray-900 
+    text-xs font-bold  z-50
+    transition-all duration-100 scale-0 origin-left;
+  }
+
+  .sidebar-links-profile {
+    @apply relative flex items-center justify-center  cursor-pointer
+    h-12 w-12 mt-2 mb-2 mx-auto
+    bg-gray-400  hover:bg-violet-500
+    text-violet-500 hover:text-white
+    dark:bg-gray-800 dark:hover:bg-violet-500 
+    hover:rounded-xl rounded-3xl
+    transition-all duration-300 ease-linear shadow-lg; 
+  }
+
     /* buttons */
     .btn {
       @apply w-2/5 px-5 py-3 border-2 border-black rounded-md bg-black text-white
@@ -69,20 +106,112 @@ body {
     }
 
     .btn-success-outline {
-      @apply btn-class text-secondary-700 dark:text-secondary-300 
-      border-2 border-secondary-700 dark:border-secondary-300 ;
+      @apply btn-class text-violet-700 dark:text-violet-300 
+      border-2 border-violet-700 dark:border-violet-300 ;
       
     }
 
     .btn-solid-no-animation {
       @apply font-bold text-white cursor-pointer  px-4 py-1 my-2
-      w-full bg-secondary-500 border-secondary-300 ;
+      w-full bg-violet-500 border-violet-300 hover:bg-violet-700
+       disabled:bg-slate-400 disabled:cursor-default;
     }
 
     .btn-comment {
-      @apply cursor-pointer text-sm text-black bg-transparent hover:dark:bg-primary-900
+      @apply cursor-pointer text-sm text-black bg-transparent hover:dark:bg-gray-900
       hover:bg-slate-200 dark:text-white py-1 px-2;
     }
+
+
+
+    /* dsdas */
+          /* card */
+          .post-card {
+            @apply flex flex-col bg-white shadow-lg
+            md:flex-row md:w-4/5 md:max-w-5xl my-4 ;
+          }
+    
+          .post-image-data-create {
+            @apply h-60 relative z-10 overflow-hidden bg-slate-100 dark:bg-gray-900
+          }
+    
+          .post-image-data {
+            @apply h-60 relative z-10 overflow-hidden
+            md:basis-2/5 md:h-auto;
+          }
+    
+          .post-background-image {
+            @apply w-full h-full absolute
+            top-0 left-0 z-10 transition-transform duration-1000
+            bg-no-repeat hover:scale-150;
+          }
+    
+          .post-background-image-img {
+            @apply w-full h-full bg-cover;
+          }
+    
+          .publication-details {
+            @apply w-full h-full  bg-gradient-to-t text-white
+            absolute top-0 left-0 p-4
+            flex flex-col z-30 ;
+          }
+    
+          .author {
+            @apply flex items-center mt-2 transition-all delay-75
+            hover:text-cyan-200  ;
+          }
+          .date {
+            @apply flex items-center;
+          }
+    
+          .post-data {
+            @apply bg-white pt-8 px-12 relative basis-3/5 dark:bg-primary-600
+            md:before:w-14 md:before:h-full md:before:bg-white md:before:absolute
+            md:before:top-0 md:before:-left-6 md:before:z-30 md:before:-skew-x-6 md:before:dark:bg-primary-600
+            ;
+          }
+    
+          .post-title {
+            @apply text-3xl text-black dark:text-white;
+          }
+    
+          .post-subtitle {
+            @apply text-base uppercase text-gray-400
+            mt-4 mb-6 mx-0;
+          }
+    
+          .post-description {
+            @apply relative text-sm text-black dark:text-white;
+          }
+    
+          .cta {
+            @apply text-right text-base font-bold text-black dark:text-white;
+          }
+          /* card-create */
+          .post-card-create {
+            @apply flex flex-col bg-white shadow-lg
+          }
+    
+          .post-data-create {
+            @apply bg-white py-8 px-12 relative basis-3/5 dark:bg-gray-600;
+          }
+    
+          .post-description-create {
+            @apply relative text-sm  w-full text-black dark:text-white;
+          }
+
+          .form-class {
+            @apply flex flex-col justify-center items-center
+            w-5/6 md:w-3/6 lg:w-2/6 mt-20 mx-auto bg-gray-100 dark:bg-gray-500
+            p-6 shadow-md rounded-md;
+          }
+
+          .form-title {
+            @apply text-4xl mb-12 dark:text-white;
+          }
+          .user-inputs {
+            @apply w-full dark:bg-slate-400 dark:text-white p-2 border-2 border-violet-500 rounded-md mb-10;
+        }
 }
 
 

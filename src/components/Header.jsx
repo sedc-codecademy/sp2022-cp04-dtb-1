@@ -33,26 +33,28 @@ const Header = () => {
     <>
  
    
-    <nav className='relative z-30 h-20 flex flex-row justify-around items-center bg-slate-50 shadow-md cursor-pointer'>
+    <nav className='relative z-40 h-20 flex flex-row justify-around items-center bg-slate-50 shadow-md cursor-pointer dark:bg-gray-900 dark:text-white'>
         <GiHamburgerMenu size="30" onClick={mobileHamburger} 
                     className={`block lg:hidden
-                        ${hamburger ? 'text-violet-600 hover:text-black' : 'text-black hover:text-violet-600'}
+                        ${hamburger ? 'text-violet-600 hover:text-black' : 'text-black hover:text-violet-600 dark:text-white'}
                     `} />
         <div className='logo text-3xl text text-violet-600 font-semibold'>
-            <h2>DevBlog</h2>
+            <h2>
+                <NavLink to={'/'}>DevBlog</NavLink>
+            </h2>
         </div>
    
-        <ul className={` bg-slate-50
+        <ul className={` bg-slate-50  dark:bg-gray-900
                         ${hamburger 
                             ? "absolute w-full top-full flex flex-col justify-center items-start space-y-3  pt-4" 
-                            : "hidden"} lg:relative lg:w-auto lg:flex lg:flex-row lg:top-0 lg:justify-between lg:items-center lg:space-x-5 lg:space-y-0 lg:pt-0
+                            : "hidden"} lg:relative lg:w-auto lg:flex lg:flex-row lg:top-0 lg:justify-between lg:items-center lg:space-x-5 lg:space-y-0 lg:pt-0 
         `}>
                 <HeaderLinks mobileHamburger={mobileHamburger} text={"Home"} path={"/"}/>
                 <HeaderLinks mobileHamburger={mobileHamburger} text={"Newsletter"} path={"/newsletter"}/>
                 <HeaderLinks mobileHamburger={mobileHamburger} text={"About"} path={"/about"}/>
                 {
                     user
-                    ? <HeaderLinks mobileHamburger={mobileHamburger} text={user.username} path={`profile`}/>
+                    ? <HeaderLinks mobileHamburger={mobileHamburger} text={user.username} path={`/profile`}/>
                     : <HeaderLinks mobileHamburger={mobileHamburger} text={"LogIn"} path={"/login"}/>
                 }
                 

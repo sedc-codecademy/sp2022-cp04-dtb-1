@@ -52,11 +52,8 @@ const Login = () => {
   return (
     <Layout>
              <form onSubmit={onSubmit}  
-                className="flex flex-col justify-center items-center
-                w-5/6 md:w-3/6 lg:w-2/6 mt-20 mx-auto bg-gray-100
-                p-6 shadow-md rounded-md
-                ">   
-                <h2 className='text-4xl mb-12 '>Login</h2>
+                className="form-class">   
+                <h2 className='form-title'>Login</h2>
                 <div className='w-full'>
                     <input  className='user-inputs'
                         type="text" 
@@ -78,7 +75,7 @@ const Login = () => {
                     </input>
                 </div>
                 <button disabled={!username || !password} className='btn'>Login</button>
-                <p className='mt-4'>Dont have an account? <span className='text-violet-500'><NavLink to='/register'> Register</NavLink></span></p>
+                <p className='mt-4'>Dont have an account? <span className='text-violet-500 dark:text-violet-300'><NavLink to='/register'> Register</NavLink></span></p>
             </form>
     </Layout>
 

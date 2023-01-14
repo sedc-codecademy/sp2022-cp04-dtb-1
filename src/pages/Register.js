@@ -39,14 +39,23 @@ const Register = () => {
                  
     }
 
+    useEffect(() => {
+        if(loading == "succeeded" ) {
+          toast.success(`Welcome ${user.username}`)
+          navigate('/');
+        }
+        if(loading == "failed" ) {
+          toast.error(error)
+        }
+        dispatch(reset());
+  
+      }, [user, loading, error])
+
   return (
     <Layout>
              <form onSubmit={onSubmit}  
-                className="flex flex-col justify-center items-center
-                w-5/6 md:w-3/6 lg:w-2/6 mt-20 mx-auto bg-gray-100
-                p-6 shadow-md rounded-md
-                ">   
-                <h2 className='text-4xl mb-12 '>Register</h2>
+                className="form-class">   
+                <h2 className='form-title'>Register</h2>
                 <div className='w-full'>
                     <input  className='user-inputs'
                         type="text" 
@@ -98,7 +107,7 @@ const Register = () => {
                     </input>
                 </div>
                 <button disabled={!username || !password} className='btn'>Register</button>
-                <p className='mt-4'>Already have an acount? <span className='text-violet-500'><NavLink to='/login'> Login</NavLink></span></p>
+                <p className='mt-4'>Already have an acount? <span className='text-violet-500 dark:text-violet-300'><NavLink to='/login'> Login</NavLink></span></p>
             </form>
     </Layout>
 
