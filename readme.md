@@ -53,18 +53,36 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/c
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+- [Requirements](docs/reqs.md)
+- [Tools](docs/tools.md)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+# Name of project
 
-### Advanced Configuration
+## About the project
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- What is the project
+- As what kind of assignment was the project created
+- What were the basic requirements
 
-### Deployment
+## Idea
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- What was the idea for the project
+- What is the main goal of the project
+- How is it meant to be used
+  > Note: Front end projects explain the idea of the project they picked
 
-### `npm run build` fails to minify
+## Features
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- What kind of web solution is it
+- What are the main features
+
+## Built with
+
+- Technologies used
+- Architecture or patterns used
+- Libraries or frameworks used
+- Tools used
+
+## License
+
+- Text that the project is licensed ( MIT is recommended license )
