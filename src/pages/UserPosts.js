@@ -13,7 +13,7 @@ const UserPosts = () => {
   const [posts, setPosts] = useState([]);
 
   const getPosts = async () => {
-    const API_URL = "http://localhost:5139/api/post";
+    const API_URL = `${process.env.REACT_APP_API_URL}/api/post`;
     let result = await axios({
       headers: {
         Authorization: `Bearer ${user.token}`,
@@ -32,7 +32,7 @@ const UserPosts = () => {
   const deletePost = async (index) => {
     //toast.warning("Not Implemented");
     try {
-      const API_URL = "http://localhost:5139/api/post";
+      const API_URL = `${process.env.REACT_APP_API_URL}/api/post`;
       let result = await axios({
         headers: {
           Authorization: `Bearer ${user.token}`,

@@ -35,7 +35,7 @@ const FilterSection = () => {
   }, []);
 
   const getTags = async () => {
-    const API_URL = "http://localhost:5139/api/tag";
+    const API_URL = `${process.env.REACT_APP_API_URL}/api/tag`;
     let result = await axios({
       method: "get",
       url: API_URL + "/getAllTags",
@@ -54,7 +54,7 @@ const FilterSection = () => {
   const chagePage = () => setPage((prevState) => prevState + 1);
 
   const getPosts = async () => {
-    const API_URL = "http://localhost:5139/api/post";
+    const API_URL = `${process.env.REACT_APP_API_URL}/api/post`;
     const result = await axios({
       method: "get",
       url:

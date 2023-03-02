@@ -13,7 +13,7 @@ const HeroSection = () => {
   const [posts, setPosts] = useState(null);
 
   const getPosts = async () => {
-    const API_URL = "http://localhost:5139/api/Post";
+    const API_URL = `${process.env.REACT_APP_API_URL}/api/Post`;
     let result = await axios({
       method: "get",
       url: API_URL + "/getTopRated",
