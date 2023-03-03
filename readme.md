@@ -1,4 +1,4 @@
-# DevBlog Site 📄 
+# Tech Blog ⚾
 
 ## Website live URL
 [Demo](https://thriving-marshmallow-070aed.netlify.app)
