@@ -1,88 +1,34 @@
-# Getting Started with Create React App
+# DevBlog Site 📄 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Website live URL
+[Demo](https://thriving-marshmallow-070aed.netlify.app)
 
-## Available Scripts
+## About the project ⚡
 
-In the project directory, you can run:
+This project was built as a learning experience to teach us about building a website in a team enviormnet. The goal was to create a simple blog that would have most of the core features you would expect to find in a real blog.
 
-### `npm start`
+## Features 👨‍💻
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Login 🌱
+You can register and login to be able to rate and comment on posts. You don't need an account to read any of the posts.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Creator Account** for demo
+- Username: Admin1
+- Password: admin1
+### Posts📝
+Only users with a Creator role are able to create posts. The creator of the posts can edit or delete only the posts that he is an author of.
+### Comments :rainbow:
+If you are logged in, you can leave a comment on a post. There is an Anonymus option if you want your name to stay a secret.
+### Stars :star:
+If you are logged in, you can rate a post. A user can only give a single rating per post, but the value can be edited.
+### Newsletter 📫
+You can leave your email and receive updates when a new post has been published. You can unsubscribe anytime if you are no longer interested in receiving updates.
 
-### `npm test`
+## Tehnologies used 🔭
+Initially the front-end built with vanilla javascript, later it was refactored using ReactJs.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Some important libraries used:
+- Tailwind - For styling the project
+- Redux Toolkit - Used for managing global the global state of the user.
+- Toastify - Alert the user when an action is done or there is an error
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-- [Requirements](docs/reqs.md)
-- [Tools](docs/tools.md)
-
-# Name of project
-
-## About the project
-
-- What is the project
-- As what kind of assignment was the project created
-- What were the basic requirements
-
-## Idea
-
-- What was the idea for the project
-- What is the main goal of the project
-- How is it meant to be used
-  > Note: Front end projects explain the idea of the project they picked
-
-## Features
-
-- What kind of web solution is it
-- What are the main features
-
-## Built with
-
-- Technologies used
-- Architecture or patterns used
-- Libraries or frameworks used
-- Tools used
-
-## License
-
-- Text that the project is licensed ( MIT is recommended license )
